@@ -1,0 +1,162 @@
+<!-- activity 1 -->
+<!-- content -->
+<div style="padding: 5px;">
+
+    <p style="font-size: 16px; font-weight: 700; margin-bottom: 18px;">Activity 1: Nested Decision<span style="color: #e20613"></span>
+    </p>
+
+    <p style="font-size: 16px; text-align: justify;">We previously learnt how we can incorporate decisions into our code.&nbsp; There may be occasions where we need to have nested decisions, that is, decisions inside decisions.&nbsp; This need arises in situations where the decision to be made depends
+        on the outcome of a previous decision.</p>
+
+    <p style="font-weight:700;">
+        <br>[Explanation]
+    </p>
+
+    <p style="font-size: 16px; text-align: justify;">Let us consider a simple example where a student is deciding what to do. If the activity is <span class="" style="color: rgb(216, 59, 59);">"recover"</span> then they need to decide whether to sleep or socialise. If the activity
+        is not <span class="" style="color: rgb(216, 59, 59);">"recover"</span> then they will study.</p>
+
+    <p style="text-align:justify">The code for such a program may look as follows:</p>
+
+    <p style="font-size: 16px;">
+        <br>
+    </p>
+
+    <pre style="background-color: #eee; font-size: 16px;"><span style="color: rgb(216, 59, 59);" class=""># ask user what to do</span>
+print(<span style="color: rgb(29, 134, 102);" class="">"What should I do (recover/study)?"</span>)
+activity = <span style="color: rgb(0, 143, 189);">input</span>()
+    
+<span style="color: rgb(216, 59, 59);" class=""># decide if user should recover or study</span>
+<span style="color: rgb(0, 143, 189);">if </span>activity == <span style="color: rgb(29, 134, 102);" class="">"recover"</span>:
+
+    <span style="color: rgb(216, 59, 59);" class=""># ask user how they want to recover</span>
+    print(<span style="color: rgb(29, 134, 102);" class="">"How would you like to recover (sleep/socialise)?"</span>)
+    recover_by = <span style="color: rgb(0, 143, 189);">input</span>()
+    
+    <span style="color: rgb(216, 59, 59);" class=""># decide if user should sleep or socialise</span>
+    <span style="color: rgb(0, 143, 189);">if </span>recover_by == <span style="color: rgb(29, 134, 102);" class="">"sleep"</span>:
+        <span style="color: rgb(0, 143, 189);">print</span>(<span style="color: rgb(29, 134, 102);" class="">"zzzZZZzzz"</span>)
+    <span style="color: rgb(0, 143, 189);">else</span>:
+        <span style="color: rgb(0, 143, 189);">print</span>(<span style="color: rgb(29, 134, 102);" class="">"I will text my friends!"</span>)
+<span style="color: rgb(0, 143, 189);">else</span>:
+    <span style="color: rgb(0, 143, 189);">print</span>(<span class="" style="color: rgb(29, 134, 102);">"I will study"</span>)</pre>
+
+    <p style="font-size: 16px;">
+        <br>
+    </p>
+
+    <p style="text-align:justify">You may notice that in the above example that the second if statement is indented so that it is nested within the first if statement.&nbsp; This means that the second if statement will only be evaluated if the condition for the first if statement
+        is true, that is, the user enters <span class="" style="color: rgb(216, 59, 59);">"recover"</span>.</p>
+
+    <p style="font-weight:700;">
+        <br>[Tasks]
+    </p>
+
+    <p style="text-align: justify">We wish to create a program to classify books.</p>
+
+    <p>Start by creating a new python file called&nbsp;<span style="color:#e20613">nested_if.py</span>&nbsp;in the <span style="color:#e20613">week2&nbsp;</span>folder.</p>
+
+    <p style="text-align: justify">The program should start by asking the user to enter the cover type (hard or soft) of the book.
+        <br>If the book has a <span style="color: #e20613">"soft"</span> cover then the program should ask the user if the book is <span style="color: #e20613">"perfect bound"</span>.
+        <br>If the answer is <span style="color: #e20613">"yes"</span> then the message
+        <span style="color: #e20613">"Soft cover, perfect bound books are very popular!"</span> should be displayed
+        <br>otherwise the message <span style="color: #e20613">"Soft covers with coils or stitches are great for short books"</span> should be displayed.
+        <br>Alternatively, if the book has a <span style="color: #e20613">"hard"</span> cover then the message <span style="color: #e20613">"Books with hard covers can be more expensive!"</span> should be displayed.
+    </p>
+
+    <p style="text-align: justify">An example run of such a program is shown below:</p>
+
+    <p>
+        <br>
+    </p>
+
+    <pre style="background-color: #eee; font-size: 16px;">What type of cover does the book have?
+soft
+ 
+Is the book perfect-bound?
+yes
+
+Soft cover, perfect bound books are very popular!<br></pre>
+
+    <p><span style="font-size: 1rem;">Code your solution and be sure to include appropriate comments in your code.</span><br></p>
+
+    <p style="font-weight:700;">
+        <br>[Commit to Repository]
+    </p>
+
+    <p style="text-align: justify;">It is time to commit our working program to our repository. Using appropriate commands to commit your changes. You should add a description for the commit summarising the changes you have made e.g. <span class="" style="color: rgb(216, 59, 59);">"<span>Added code to demonstrate the use of a nested decision statement.</span>"</span>.</p>
+
+</div>
+
+<hr>
+
+<!-- activity 2 -->
+<!-- content -->
+<div style="padding: 5px;">
+
+    <p style="font-size: 16px; font-weight: 700; margin-bottom: 18px;">Activity 2: Multiple Nested Decisions<span style="color: #e20613"></span>
+    </p>
+
+    <p style="text-align:justify;">You are looking for your phone... It was literally in your hand a second ago!</p>
+
+    <p style="font-weight:700;">
+        <br>[Tasks]
+    </p>
+
+    <p style="text-align: justify">The program should start by displaying the message <span class="" style="color: rgb(216, 59, 59);">"Where should I look?"</span>
+        <br>The program should then read the user's response
+        <br>The program should then do the following:
+        <br>
+        <br>- If the user enters <span class="" style="color: rgb(226, 6, 19);">"in the bedroom" </span>then the program should display the message <span class="" style="color: rgb(226, 6, 19);">"Where in the bedroom should I look?"</span>.
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the user enters
+        <span class="" style="color: rgb(226, 6, 19);">"under the bed" </span>then the program should respond with<span class="" style="color: rgb(226, 6, 19);"> "Found some shoes but no phone" <span class="" style="color: rgb(44, 45, 46);"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; otherwise it should respond with </span>"Found
+            some mess but no phone."
+            <br>
+        </span>
+        <br>- If the user enters <span class="" style="color: rgb(226, 6, 19);">"in the bathroom"</span> then the program should display the message <span class="" style="color: rgb(226, 6, 19);">"Where in the bathroom should I look?"</span>.&nbsp;
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the user enters
+        <span class="" style="color: rgb(226, 6, 19);">"in the bathtub"&nbsp;</span>the program should respond with <span class="" style="color: rgb(226, 6, 19);">"Found a rubber duck but no phone"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>otherwise
+        it should respond with <span class="" style="color: rgb(226, 6, 19);">"Found bathroom stuff but no phone."</span>
+        <br>
+        <br>- If the user enters <span class="" style="color: rgb(226, 6, 19);">"in the living room"</span> the program should display the message <span class="" style="color: rgb(226, 6, 19);">"Where in the living room should I look?"</span>.&nbsp;
+        <br>&nbsp; &nbsp; &nbsp; &nbsp; If the user enters
+        <span class="" style="color: rgb(226, 6, 19);">"on the table"</span> the program should respond with <span class="" style="color: rgb(226, 6, 19);">"Yes! I found my phone!"</span>
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; otherwise it should respond with <span class="" style="color: rgb(226, 6, 19);">"Found some stuff but no phone."</span>
+        <br>
+        <br>- If the user enters anything other than the above then the message <span class="" style="color: rgb(226, 6, 19);">"I do not know where that is but I will keep looking."</span> should be displayed.
+    </p>
+
+    <p style="text-align: justify">Some sample runs of the program are shown below:</p>
+
+    <pre style="background-color: #eee; font-size: 16px;">Where should I look?
+in the bedroom
+Where in the bedroom should I look?
+in the cupboard
+Found some mess but no phone.</pre>
+
+    <pre style="background-color: #eee; font-size: 16px;">Where should I look?
+in the bathroom
+Where in the bathroom should I look?
+in the bathtub
+Found a rubber duck but no phone</pre>
+
+    <pre style="background-color: #eee; font-size: 16px;">Where should I look?
+in the living room
+Where in the living room should I look?
+on the table
+Yes! I found my phone!</pre>
+
+
+    <p><span style="font-size: 1rem;">Code your solution and be sure to include appropriate comments in your code.</span><br></p>
+
+    <p style="font-weight:700;">
+        <br>[Commit to Repository]
+    </p>
+
+    <p style="text-align: justify;">It is time to commit our working program to our repository. Use suitable commands to commit your changes. You should add a description for the commit summarising the changes you have made e.g. <span class="" style="color: rgb(216, 59, 59);">"<span>Added code to demonstrate the use of multiple nested statements.</span>"</span>.</p>
+
+</div>
+
+<!-- footer -->
+<div style="background-color: #ccc; color: #fff; font-size: 12px; margin-top: 32px; padding: 5px; text-align: center;">Originally created by Prins Butt, updated and modified by Darren Cunningham.</div>
+
+<hr>
